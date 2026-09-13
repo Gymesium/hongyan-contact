@@ -1,0 +1,25 @@
+# Java / Gradle
+backend/build/
+backend/.gradle/
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# SQLite 数据库文件
+*.db
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# IDE / 环境
+.idea/
+*.iml
+.env
+deploy/.env
+
+# 课程指南的 Notion 导出（文档资料，不进代码仓库）
+项目信息/
+
+# 工具残留
+.notion_raw.html

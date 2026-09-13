@@ -1,0 +1,35 @@
+# 统一行尾：仓库内一律 LF；Windows 工作区由 Git 自动转换为 CRLF
+* text=auto
+
+# 二进制文件（不做行尾/文本处理）
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.svg  text
+*.jar  binary
+*.zip  binary
+*.db   binary
+
+# 脚本文件：行尾固定
+*.sh     text eol=lf
+gradlew  text eol=lf
+*.bat    text eol=crlf
+*.cmd    text eol=crlf
+
+# 源码与配置文件
+*.java text
+*.kt   text
+*.kts  text
+*.yml  text
+*.yaml text
+*.sql  text
+*.js   text
+*.vue  text
+*.json text
+*.css  text
+*.md   text
+*.html text
+*.conf text
+*.env* text
