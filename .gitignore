@@ -20,6 +20,7 @@ deploy/.env
 
 # 课程指南的 Notion 导出（文档资料，不进代码仓库）
 项目信息/
+deploy/
 
 # 工具残留
 .notion_raw.html

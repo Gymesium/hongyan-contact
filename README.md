@@ -51,10 +51,6 @@ hongyan-contacts/
 │       ├── router/ stores/      # 路由与状态
 │       ├── views/               # 页面
 │       └── styles/
-├── deploy/                      # 部署用 Docker/Nginx 文件
-│   ├── docker-compose.yml
-│   ├── .env.example
-│   └── nginx/hongyan-api.conf
 └── README.md
 ```
 
@@ -122,12 +118,3 @@ npm run dev   # http://localhost:5173
 | DELETE | `/api/admin/accounts/{id}` | 管理员 | 删除未审核账户 |
 | GET / POST / PUT / DELETE | `/api/admin/majors[/{id}]` | 管理员 | 专业字典维护（停用而非物理删除） |
 
-## 部署
-
-见 `deploy/` 目录：
-
-- `deploy/docker-compose.yml`：Spring Boot 容器（宿主机只开 `127.0.0.1:18080`，SQLite 文件挂 `data` 卷持久化）
-- `deploy/nginx/hongyan-api.conf`：在 `api.gymesium.cn` 的 server 块 include 本片段，只接管 `/hongyan/` 路径
-- 前端 `npm run build` 后部署到 Cloudflare Pages（构建目录 `dist`、根目录 `frontend`、环境变量 `VITE_API_BASE=https://api.gymesium.cn/hongyan/api`），`public/_redirects` 提供 SPA 回退
-
-完整步骤参考《部署方法》。
